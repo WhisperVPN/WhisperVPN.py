@@ -56,9 +56,9 @@ class Whisper:
       time.sleep(1)
       print(f'{colorama.Fore.BLUE}Connecting to our server...')
       time.sleep(3)
+      print(f'{colorama.Fore.MAGENTA} Successfully connected to linux@ec2-18-236-156-226.us-west-2.compute.amazonaws.com!')
       os.system('tor')
       time.sleep(5)
-      print(f'{colorama.Fore.MAGENTA} Successfully connected to linux@ec2-18-236-156-226.us-west-2.compute.amazonaws.com!')
       os.system(f'ssh -i {self.keys} {self.server} -p {self.port}')
     elif options == 2:
       os.system('am start -a android.intent.action.VIEW -d https://whispervpn.company.site/ > /dev/null 2>&1')
