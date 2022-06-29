@@ -64,8 +64,7 @@ class Whisper:
       os.system('am start -a android.intent.action.VIEW -d https://whispervpn.company.site/ > /dev/null 2>&1')
       self.Start()
     elif options == 3:
-      self.Update()
-      self.Start()
+      os.system('bash update.sh')
     elif options == 4:
       os.system('am start -a android.intent.action.VIEW -d https://github.com/WhisperVPN/WhisperVPN/issues > /dev/null 2>&1')
       self.Start()
