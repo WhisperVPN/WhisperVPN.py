@@ -34,7 +34,7 @@ class Whisper:
                                  {colorama.Fore.BLUE}➡ {colorama.Fore.MAGENTA}[3]{colorama.Fore.BLUE} Update
                                  {colorama.Fore.BLUE}➡ {colorama.Fore.MAGENTA}[4]{colorama.Fore.BLUE} Report Issues
                                  {colorama.Fore.BLUE}➡ {colorama.Fore.MAGENTA}[5]{colorama.Fore.BLUE} Install Dependencies (Only for Apt)
-                                 {colorama.Fore.BLUE}➡ {colorama.Fore.MAGENTA}[6]{colorama.Fore.BLUE} Exit
+                                                 {colorama.Fore.BLUE}➡ {colorama.Fore.MAGENTA}[6]{colorama.Fore.BLUE} Exit
     {colorama.Fore.RESET}''')
     
   def Update(self):
