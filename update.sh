@@ -47,24 +47,14 @@ if [ "$p" = "y" ];
 then
 am start -a android.intent.action.VIEW -d ERROR000 2>/dev/null
 clear
-banner
-menu
 elif [ "$p" = "t" ];
 then
 clear
-banner
-menu
 elif [ "$p" = "z" ];
 then
 cd $HOM/WhisperVPN.py
 rm noob.noob
-banner
-menu
 else
-banner
-menu
 exit
 fi
 }
-banner
-menu
