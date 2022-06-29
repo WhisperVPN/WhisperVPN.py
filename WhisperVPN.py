@@ -33,8 +33,8 @@ class Whisper:
                                  {colorama.Fore.BLUE}➡ {colorama.Fore.MAGENTA}[2]{colorama.Fore.BLUE} About Us
                                  {colorama.Fore.BLUE}➡ {colorama.Fore.MAGENTA}[3]{colorama.Fore.BLUE} Update
                                  {colorama.Fore.BLUE}➡ {colorama.Fore.MAGENTA}[4]{colorama.Fore.BLUE} Report Issues
-                                 {colorama.Fore.BLUE}➡ {colorama.Fore.MAGENTA}[5]{colorama.Fore.BLUE} Install Dependencies (Only for Apt)
-                                                 {colorama.Fore.BLUE}➡ {colorama.Fore.MAGENTA}[6]{colorama.Fore.BLUE} Exit
+                                 {colorama.Fore.BLUE}➡ {colorama.Fore.MAGENTA}[5]{colorama.Fore.BLUE} Install Dependencies
+                                 {colorama.Fore.BLUE}➡ {colorama.Fore.MAGENTA}[6]{colorama.Fore.BLUE} Exit
     {colorama.Fore.RESET}''')
     
   def Update(self):
@@ -49,16 +49,16 @@ class Whisper:
     options = int(input(f'                        {colorama.Fore.BLUE}➡ {colorama.Fore.MAGENTA}Option:{colorama.Fore.BLUE} '))
     os.system('clear')
     if options == 1:
-      print(f'{colorama.Fore.MAGENTA}Starting WhisperVPN...')
+      print(f'{colorama.Fore.BLUE}Starting WhisperVPN...')
       time.sleep(1)
-      print(f'{colorama.Fore.MAGENTA}Please start Tor in other terminal window using command "tor", then press any key (Just for now) ...')
-      input()
-      print(f'{colorama.Fore.MAGENTA}Starting FTP Server...')
+      print(f'{colorama.Fore.BLUE}Starting FTP Server...')
       os.system('bftpd -d')
       time.sleep(1)
-      print(f'{colorama.Fore.MAGENTA}Connecting to our server...')
+      print(f'{colorama.Fore.BLUE}Connecting to our server...')
       time.sleep(3)
-      print(f'{colorama.Fore.MAGENTA}Connected!')
+      os.system('tor')
+      time.sleep(5)
+      print(f'{colorama.Fore.MAGENTA} Successfully connected to linux@ec2-18-236-156-226.us-west-2.compute.amazonaws.com!')
       os.system(f'ssh -i {self.keys} {self.server} -p {self.port}')
     elif options == 2:
       os.system('am start -a android.intent.action.VIEW -d https://whispervpn.company.site/ > /dev/null 2>&1')
