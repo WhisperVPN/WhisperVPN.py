@@ -30,7 +30,7 @@ sleep 2.0
 clear
 cd $HOME
 cd WhisperVPN.py
-bash WhisperVPN.py
+python WhisperVPN.py
 }
 vid(){
 FILE=$HOME/WhisperVPN.py
